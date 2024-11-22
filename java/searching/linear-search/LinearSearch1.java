@@ -17,6 +17,14 @@ public class LinearSearch1 {
         }
 
         int element = scan.nextInt();
+        int index = linearSearch(array, element);
+
+        if (index == -1) {
+            System.out.printf("\n%d not found.\n", element);
+            return;
+        }
+
+        System.out.printf("\nThe index of %d is %d\n", element, index);
     }
 
     public static int[] generate(int size) {
