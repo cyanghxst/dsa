@@ -41,4 +41,14 @@ public class LinearSearch1 {
         array[index1] = array[index2];
         array[index2] = temp;
     }
+
+    public static int linearSearch(int[] array, int element) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == element) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
 }
