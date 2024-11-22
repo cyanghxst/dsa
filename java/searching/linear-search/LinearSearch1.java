@@ -9,10 +9,13 @@ public class LinearSearch1 {
 
         System.out.printf("Array:\n%s\n", java.util.Arrays.toString(array));
 
-        System.out.print("\nEnter an element to search: ");
+        System.out.println("\nEnter an element to search:");
+        System.out.print("\n> ");
 
         while(!scan.hasNextInt()) {
             System.out.println("\nInvalid input. Please enter an integer.");
+            System.out.println("\nEnter an element to search:");
+            System.out.print("\n> ");
             scan.next();
         }
 
