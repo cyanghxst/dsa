@@ -40,6 +40,7 @@ public class QuickSort2 {
         quickSort(array, partitionIndex + 1, high); // right side
     }
 
+    // tony hoare's partition
     public static int partition(int[] array, int low, int high) {
         int i = low - 1;
         int j = high + 1;
