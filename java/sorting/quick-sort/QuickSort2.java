@@ -54,11 +54,9 @@ public class QuickSort2 {
                 j--;
             } while (array[j] > pivot);
 
-            if (i > j) break;
+            if (i >= j) return j;
 
             swap(array, i, j);
         }
-
-        return i;
     }
 }
