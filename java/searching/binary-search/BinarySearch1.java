@@ -22,11 +22,11 @@ public class BinarySearch1 {
         int index = binarySearch(array, element);
 
         if (index == -1) {
-            System.out.printf("\n%d not found", element);
+            System.out.printf("\n%d not found\n", element);
             return;
         }
 
-        System.out.printf("The index of %d is %d", element, index);
+        System.out.printf("\nThe index of %d is %d\n", element, index);
     }
 
     public static int[] generate(int size) {
