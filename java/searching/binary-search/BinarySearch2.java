@@ -39,6 +39,7 @@ public class BinarySearch2 {
         return array;
     }
 
+    // recursion rocks
     public static int binarySearch(int[] array, int low, int high, int key) {
         if (low > high) return -1;
 
