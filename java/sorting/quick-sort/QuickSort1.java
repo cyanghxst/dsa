@@ -34,11 +34,12 @@ public class QuickSort1 {
     }
 
     public static void quickSort(int[] array, int low, int high) {
-        if (low >= high) return;
+        if (low >= high) return; // base case
 
         int pivotIndex = partition(array, low, high);
-        quickSort(array, low, pivotIndex - 1);
-        quickSort(array, pivotIndex + 1, high);
+
+        quickSort(array, low, pivotIndex - 1); // left side
+        quickSort(array, pivotIndex + 1, high); // right side
     }
 
     public static int partition(int[] array, int low, int high) {
@@ -49,6 +50,7 @@ public class QuickSort1 {
 
         int i = low - 1;
 
+        // lomuto's partition
         for (int j = 0; j < array.length; j++) {
             if (array[j] > pivot) continue;
             i++;
