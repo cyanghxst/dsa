@@ -42,8 +42,7 @@ public class QuickSort2 {
 
     // tony hoare's partition
     public static int partition(int[] array, int low, int high) {
-        int i = low - 1;
-        int j = high + 1;
+        int i = low - 1, j = high + 1;
         int pivot = array[low];
 
         while (true) {
