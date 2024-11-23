@@ -64,7 +64,7 @@ public class BinarySearch3 {
         int random = (int) (Math.random() * (high - low + 1) + low);
         int pivot = array[random];
 
-        swap(array, high, random);
+        swap(array, random, high);
 
         int i = low - 1;
 
