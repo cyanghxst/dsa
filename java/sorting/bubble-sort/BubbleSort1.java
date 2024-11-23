@@ -39,6 +39,8 @@ public class BubbleSort1 {
                     swap(array, j, j + 1);
                 }
             }
+
+            System.out.printf("\nPass %d:\n%s\n", i, java.util.Arrays.toString(array));
         }
     }
 }
