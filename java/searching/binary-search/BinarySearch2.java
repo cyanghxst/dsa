@@ -22,7 +22,7 @@ public class BinarySearch2 {
         int index = binarySearch(array, 0, array.length - 1, element); 
 
         if (index == -1) {
-            System.out.printf("\n%d not found\n");
+            System.out.printf("\n%d not found\n", element);
             return;
         }
 
