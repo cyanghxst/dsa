@@ -41,6 +41,8 @@ public class InsertionSort1 {
                     array[j - 1] = temp;
                 }
             }
+
+            System.out.printf("\nPass %d:\n%s\n", i, java.util.Arrays.toString(array));
         }
     }
 }
