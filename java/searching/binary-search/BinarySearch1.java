@@ -5,7 +5,7 @@ public class BinarySearch1 {
         Scanner scan = new Scanner(System.in);
 
         int[] array = generate(10);
-        Arrays.toString(array);
+        Arrays.sort(array);
 
         System.out.printf("Array:\n%s\n", Arrays.toString(array));
 
