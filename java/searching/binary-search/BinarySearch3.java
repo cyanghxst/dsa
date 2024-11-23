@@ -71,7 +71,7 @@ public class BinarySearch3 {
         for (int j = low; j <= high; j++) {
             if (array[j] > pivot) continue;
             i++;
-            if (j > 1) swap(array, j, i);
+            if (j > i) swap(array, j, i);
         }
 
         return i;
