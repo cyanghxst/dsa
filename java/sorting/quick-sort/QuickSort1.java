@@ -42,6 +42,7 @@ public class QuickSort1 {
         quickSort(array, pivotIndex + 1, high); // right side
     }
 
+    // lomuto's partition
     public static int partition(int[] array, int low, int high) {
         int random = (int) (Math.random() * (high - low + 1)) + low;
         int pivot = array[random];
@@ -52,7 +53,6 @@ public class QuickSort1 {
 
         int i = low - 1;
 
-        // lomuto's partition
         for (int j = low; j <= high; j++) {
             if (array[j] > pivot) continue;
             i++;
