@@ -38,4 +38,28 @@ public class BinarySearch1 {
 
         return array;
     }
+
+    public static int binarySearch(int[] array, int key) {
+        int low = 0;
+        int high = array.length - 1;
+
+        while (low <= high) {
+            int middle = (low + high) / 2;
+
+            if (array[middle] == key) {
+                return middle;
+            }
+
+            if (array[middle] > key) {
+                high = middle - 1;
+                continue;
+            }
+
+            if (array[middle] < key) {
+                low = middle + 1;
+            }
+        }
+
+        return -1;
+    }
 }
