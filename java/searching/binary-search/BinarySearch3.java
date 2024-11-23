@@ -13,8 +13,9 @@ public class BinarySearch3 {
         System.out.print("\n> ");
 
         while(!scan.hasNextInt()) {
-            System.out.println("\nInvalid input. Please enter an integer");
             scan.next();
+            System.out.println("\nInvalid input. Please enter an integer");
+            System.out.print("\n> ");
         }
 
         int element = scan.nextInt();
