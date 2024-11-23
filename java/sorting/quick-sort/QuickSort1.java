@@ -46,6 +46,8 @@ public class QuickSort1 {
         int random = (int) (Math.random() * (high - low + 1)) + low;
         int pivot = array[random];
 
+        // System.out.printf("\nPivot is %d\n", pivot);
+
         swap(array, random, high);
 
         int i = low - 1;
@@ -56,6 +58,9 @@ public class QuickSort1 {
             i++;
             if (j > i) swap(array, j, i);
         }
+
+        // System.out.printf("\nPass:\n%s\n", java.util.Arrays.toString(array));
+        // System.out.printf("\nPivot index is %d\n\n---\n", i);
 
         return i;
     }
