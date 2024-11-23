@@ -35,9 +35,9 @@ public class QuickSort2 {
     public static void quickSort(int[] array, int low, int high) {
         if (low >= high) return;
 
-        int pivotIndex = partition(array, low, high);
-        quickSort(array, low, pivotIndex - 1); // left side
-        quickSort(array, pivotIndex + 1, high); // right side
+        int partitionIndex = partition(array, low, high);
+        quickSort(array, low, partitionIndex); // left side
+        quickSort(array, partitionIndex + 1, high); // right side
     }
 
     public static int partition(int[] array, int low, int high) {
