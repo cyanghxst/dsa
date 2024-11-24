@@ -23,14 +23,13 @@ public class QuickSelect1 {
     }
 
     public static int quickSelect(int[] array, int low, int high, int k) {
-        int pi = partition(array, low, high);
-        int position = k - 1;
-        
-        if (pi == position) return array[pi];
+        int pivotIndex = partition(array, low, high);
 
-        return (pi > (k - 1)) 
-            ? quickSelect(array, low, pi - 1, k)
-            : quickSelect(array, pi + 1, high, k);
+        if (pivotIndex == k - 1) return array[pivotIndex];
+
+        return (pivotIndex > k - 1)
+            ? quickSelect(array, low, pivotIndex - 1, k)
+            : quickSelect(array, pivotIndex + 1, high, k);
     }
 
     public static int partition(int[] array, int low, int high) {
