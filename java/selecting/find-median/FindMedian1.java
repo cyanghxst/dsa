@@ -26,7 +26,7 @@ public class FindMedian1 {
     }
 
     public static int getRandom(int start, int end) {
-        return (int) (Math.random() * (end - start + 1)) + end;
+        return (int) (Math.random() * (end - start + 1)) + start;
     }
 
     public static double findMedian(int[] array) {
