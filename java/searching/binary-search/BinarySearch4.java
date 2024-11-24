@@ -25,7 +25,7 @@ public class BinarySearch4 {
             return;
         }
 
-        System.out.printf("\nThe index of %d is %d", key, index);
+        System.out.printf("\nThe index of %d is %d\n", key, index);
     }
 
     public static int[] generate(int size) {
