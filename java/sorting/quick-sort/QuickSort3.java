@@ -22,9 +22,9 @@ public class QuickSort3 {
     public static void quickSort(int[] array, int low, int high) {
         if (low >= high) return;
 
-        int pivotIndex = partition(array, low, high);
-        quickSort(array, low, pivotIndex - 1);
-        quickSort(array, pivotIndex + 1, high);
+        int pi = partition(array, low, high);
+        quickSort(array, low, pi);
+        quickSort(array, pi + 1, high);
     }
 
     public static int partition(int[] array, int low, int high) {
