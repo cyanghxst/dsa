@@ -13,7 +13,7 @@ public class QuickSelect1 {
     }
 
     public static int[] generate(int size) {
-        int[] array = new int[size]; 
+        int[] array = new int[size];
 
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 101);
