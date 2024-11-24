@@ -33,14 +33,14 @@ public class QuickSelect1 {
     }
 
     public static int partition(int[] array, int low, int high) {
-        int random = (int) (Math.random() * array.length);
+        int random = (int) (Math.random() * (high - low + 1)) + low;
         int pivot = array[random];
 
         swap(array, random, high);
 
         int i = low - 1;
 
-        for (int j = 0; j < array.length; j++) {
+        for (int j = low; j <= high; j++) {
             if (array[j] > pivot) continue;
             i++;
             if (j > i) swap(array, j, i);
