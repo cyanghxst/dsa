@@ -9,7 +9,7 @@ public class QuickSelect1 {
 
         int element = quickSelect(array, 0, array.length - 1, 4);
 
-        System.out.printf("\nThe %dth element is %d\n", 4, element);
+        System.out.printf("\nThe %dth smallest element is %d\n", 4, element);
     }
 
     public static int[] generate(int size) {
