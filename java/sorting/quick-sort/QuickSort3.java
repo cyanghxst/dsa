@@ -28,8 +28,12 @@ public class QuickSort3 {
     }
 
     public static int partition(int[] array, int low, int high) {
-        int pivot = array[high];
         int i = low - 1, j = high + 1;
+
+        int random = (int) (Math.random() * (high - low + 1)) + low;
+        int pivot = array[random];
+
+        swap(array, random, low);
 
         while (true) {
             do {
