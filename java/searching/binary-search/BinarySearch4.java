@@ -43,7 +43,9 @@ public class BinarySearch4 {
 
         int middle = (low + high) / 2;
 
-        return (key < middle)
+        if (key == array[middle]) return middle;
+
+        return (key < array[middle])
             ? binarySearch(array, low, middle - 1, key)
             : binarySearch(array, middle + 1, high, key);
     }
