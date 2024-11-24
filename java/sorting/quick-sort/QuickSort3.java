@@ -38,18 +38,16 @@ public class QuickSort3 {
         while (true) {
             do {
                 i++;
-            } while (array[i] > pivot);
+            } while (array[i] < pivot);
 
             do {
-                j++;
-            } while (array[j] < pivot);
+                j--;
+            } while (array[j] > pivot);
 
-            if (i == j) break;
+            if (i >= j) return j;
 
             swap(array, i, j);
         }
-
-        return i;
     }
 
     public static void swap(int[] array, int index1, int index2) {
