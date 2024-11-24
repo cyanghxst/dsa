@@ -2,7 +2,7 @@ import java.util.*;
 
 public class QuickSort3 {
     public static void main(String[] args) {
-        int[] array = generate(10);
+        int[] array = generate(20);
         System.out.printf("Original Array:\n%s\n", Arrays.toString(array));
 
         quickSort(array, 0, array.length - 1);
