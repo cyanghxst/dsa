@@ -28,8 +28,11 @@ public class QuickSort5 {
     }
 
     public static int partition(int[] array, int low, int high) {
-        int median = median(array[low], array[(low + high) / 2], array[high]);
+
+        int median = median(array, low, (low + high) / 2, high);
         int pivot = array[median];
+
+        swap(array, median, high);
 
         int i = low - 1;
 
@@ -42,10 +45,10 @@ public class QuickSort5 {
         return i;
     }
 
-    public static int median(int a, int b, int c) {
-        if (a > b ^ a < c) {
+    public static int median(int[] array, int a, int b, int c) {
+        if (array[a] > array[b] ^ array[a] < array[c]) {
             return a;
-        } else if (b > a ^ b < c) {
+        } else if (array[b] > array[a] ^ array[b] < array[c]) {
             return b;
         } else {
             return c;
