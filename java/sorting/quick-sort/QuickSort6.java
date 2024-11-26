@@ -22,12 +22,12 @@ public class QuickSort6 {
     }
 
     public static void quickSort(int[] array, int low, int high) {
-        if (low >= high) return;
+        if (low < high) {
+            int pi = partition(array, low, high);
 
-        int partitionIndex = partition(array, low, high);
-
-        quickSort(array, low, partitionIndex);
-        quickSort(array, partitionIndex + 1, high);
+            quickSort(array, low, pi);
+            quickSort(array, pi + 1, high);
+        }
     }
 
     public static int partition(int[] array, int low, int high) {
