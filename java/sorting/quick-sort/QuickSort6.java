@@ -2,7 +2,7 @@ import java.util.*;
 
 public class QuickSort6 {
     public static void main(String[] args) {
-        int[] array = generate(10);
+        int[] array = generate(10, false);
         System.out.printf("Array:\n%s\n", Arrays.toString(array));
 
         quickSort(array, 0, array.length - 1);
@@ -10,11 +10,12 @@ public class QuickSort6 {
         System.out.printf("\nSorted Array:\n%s\n", Arrays.toString(array));
     }
 
-    public static int[] generate(int size) {
+    public static int[] generate(int size, boolean fixedSeed) {
+        Random rand = fixedSeed ? new Random(69) : new Random();
         int[] array = new int[size];
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 101);
+            array[i] = rand.nextInt(101);
         }
 
         return array;
