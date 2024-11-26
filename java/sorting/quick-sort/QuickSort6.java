@@ -55,11 +55,11 @@ public class QuickSort6 {
     }
 
     public static int medianOfThree(int[] array, int a, int b, int c) {
-        if (array[a] > array[b] && array[a] < array[c] || array[a] < array[b] && array[a] > array[c]) {
+        if (array[a] > array[b] ^ array[a] < array[c]) {
             return a;
         }
 
-        if (array[b] > array[a] && array[b] < array[c] || array[b] < array[a] && array[b] > array[c]) {
+        if (array[b] > array[a] ^ array[b] < array[c]) {
             return b;
         }
 
