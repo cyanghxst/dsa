@@ -30,7 +30,10 @@ public class QuickSort6 {
     }
 
     public static int partition(int[] array, int low, int high) {
-        int pivot = array[low];
+        int medianIndex = medianOfThree(array, low, (low + high) / 2, high);
+        int pivot = array[medianIndex];
+
+        swap(array, medianIndex, low);
 
         int i = low - 1;
         int j = high + 1;
@@ -41,10 +44,10 @@ public class QuickSort6 {
             } while (array[i] < pivot);
 
             do {
-                j++;
+                j--;
             } while (array[j] > pivot);
 
-            if (i > j) return i;
+            if (i >= j) return j;
 
             swap(array, i, j);
         }
