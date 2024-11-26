@@ -29,6 +29,7 @@ public class QuickSort5 {
 
     public static int partition(int[] array, int low, int high) {
 
+        // median of three
         int median = median(array, low, (low + high) / 2, high);
         int pivot = array[median];
 
@@ -36,6 +37,7 @@ public class QuickSort5 {
 
         int i = low - 1;
 
+        // lomuto's partition
         for (int j = low; j <= high; j++) {
             if (array[j] > pivot) continue;
             i++;
