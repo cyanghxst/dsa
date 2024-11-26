@@ -30,10 +30,10 @@ public class QuickSort5 {
     public static int partition(int[] array, int low, int high) {
 
         // median of three
-        int median = median(array, low, (low + high) / 2, high);
-        int pivot = array[median];
+        int index = medianOfThree(array, low, (low + high) / 2, high);
+        int pivot = array[index];
 
-        swap(array, median, high);
+        swap(array, index, high);
 
         int i = low - 1;
 
