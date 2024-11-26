@@ -47,14 +47,16 @@ public class QuickSort5 {
         return i;
     }
 
-    public static int median(int[] array, int a, int b, int c) {
+    public static int medianOfThree(int[] array, int a, int b, int c) {
         if (array[a] > array[b] ^ array[a] < array[c]) {
             return a;
-        } else if (array[b] > array[a] ^ array[b] < array[c]) {
-            return b;
-        } else {
-            return c;
         }
+
+        if (array[b] > array[a] ^ array[b] < array[c]) {
+            return b;
+        }
+
+        return c;
     }
 
     public static void swap(int[] array, int i, int j) {
