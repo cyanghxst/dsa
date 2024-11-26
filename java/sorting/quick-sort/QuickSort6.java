@@ -22,11 +22,11 @@ public class QuickSort6 {
     }
 
     public static void quickSort(int[] array, int low, int high) {
-        if (low < high) {
+        while (low < high) {
             int pi = partition(array, low, high);
 
             quickSort(array, low, pi);
-            quickSort(array, pi + 1, high);
+            low = pi + 1;
         }
     }
 
