@@ -66,9 +66,9 @@ public class QuickSort6 {
         return c;
     }
 
-    public static void swap(int[] array, int left, int right) {
-        int temp = array[left];
-        array[left] = array[right];
-        array[right] = temp;
+    public static void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
 }
