@@ -28,8 +28,8 @@ public class QuickSelect2 {
         if (pivotIndex == key - 1) return array[pivotIndex];
 
         return (pivotIndex > key - 1)
-            ? partition(array, low, pivotIndex - 1)
-            : partition(array, pivotIndex + 1, high);
+            ? quickSelect(array, low, pivotIndex - 1, key)
+            : quickSelect(array, pivotIndex + 1, high, key);
     }
 
     public static int partition(int[] array, int low, int high) {
