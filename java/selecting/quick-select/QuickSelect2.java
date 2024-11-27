@@ -38,12 +38,9 @@ public class QuickSelect2 {
         int i = low - 1;
 
         for (int j = low; j <= high; j++) {
-            if (array[j] <= pivot) {
-                i++;
-                if (j > 1) {
-                    swap(array, j, i);
-                }
-            }
+            if (array[j] > pivot) continue;
+            i++;
+            if (j > i) swap(array, j, i);
         }
 
         return i;
